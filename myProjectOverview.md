@@ -18,24 +18,20 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. So I want my project to be mobile first. I'm using these 3 sources as my inspiration: http://www.pascalvangemert.nl/#/profile https://jessicalandzberg.github.io/Unit_1_Project/#myJourney0 https://www.lianapenn.com/
 
 ## Google Sheet
 
-Include link to your google sheet here.  Here is the sample [Joe had used in class](https://docs.google.com/spreadsheets/d/15PmioBi2dQEkewpqI7MDkDpvcVF0Trw8vmarAQbwoHk/edit#gid=0) 
+Include link to your google sheet here.  Here is the sample [Joe had used in class] https://docs.google.com/spreadsheets/d/1UnhpYCWFX9LxGuhoe5E1K74271K-VAcVojIuR0XM57A/edit#gid=0
 
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.  
 
-- [Mobile]()
-- [Tablet](https://mockflow.com/app/#Wireframe)
-- [Desktop](https://www.figma.com/)
+- [Mobile](https://imgur.com/a/2wQkVdc)
+- [Tablet]()
+- [Desktop]()
 
-Wireframing Resources:
-
-- [Mockflow](https://mockflow.com/app/#Wireframe)
-- [Figma](https://www.figma.com/)
 
 
 ## Time/Priority Matrix 
