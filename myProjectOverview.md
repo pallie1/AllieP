@@ -20,6 +20,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. So I want my project to be mobile first. I'm using these 3 sources as my inspiration: http://www.pascalvangemert.nl/#/profile https://jessicalandzberg.github.io/Unit_1_Project/#myJourney0 https://www.lianapenn.com/
 
+Here are images I might use that aren't in my Imgur: https://unsplash.com/photos/S_eu4NqJt5Y 
+https://unsplash.com/photos/3H4LBL6ggDM 
+https://unsplash.com/photos/x1Qw2gCPMUU
+
 ## Google Sheet
 
 Include link to your google sheet here.  Here is the sample [Joe had used in class] https://docs.google.com/spreadsheets/d/1UnhpYCWFX9LxGuhoe5E1K74271K-VAcVojIuR0XM57A/edit#gid=0
