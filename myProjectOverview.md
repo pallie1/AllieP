@@ -29,8 +29,8 @@ Include link to your google sheet here.  Here is the sample [Joe had used in cla
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.  
 
 - [Mobile](https://imgur.com/a/2wQkVdc)
-- [Tablet]()
-- [Desktop]()
+- [Tablet](https://imgur.com/a/Sp5KP04)
+- [Desktop](https://imgur.com/a/PyZHTFo)
 
 
 
