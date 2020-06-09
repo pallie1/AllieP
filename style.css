@@ -66,12 +66,7 @@ nav>i {
     font-size: 2rem;
 }
 
-/* .flexMe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} */
+/* nav jQuery sticky */
 
 .aboutMe {
     display: flex;
@@ -81,8 +76,33 @@ nav>i {
     background-color: whitesmoke;
 }
 
-#aboutMe {
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+ .sticky + .content {
+    padding-top: 60px;
+  }
+
+/* .flexMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+
+
+/* #aboutMe {
     
+} */
+
+.pPadding {
+    margin: 7%;
+    font-family: 'Muli', sans-serif;
+    line-height: 1.3rem;
 }
 
 .centerH3s {
@@ -114,13 +134,13 @@ nav>i {
 
 .container {
     display: inline-flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     /* width: 100%;  */
 }
 
 .tiles {
-    background-size: cover;
+    /* background-size: cover; */
     width: 100%;
     z-index: 200;
     /* margin-top: 90px; */
@@ -130,6 +150,7 @@ nav>i {
     background-color: RGBA(249, 192, 2, .8);
     position: absolute;
     z-index: 200;
+    margin: 0 auto;
 }
 /* Mobile First, then Tablet (min-width:768px) and ending with Desktop (min-width:1024px) */
 

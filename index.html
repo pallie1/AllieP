@@ -12,7 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP STYLES -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Hamburger style -->
+    <!-- Icons style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <!-- clear out inherent styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -27,41 +27,50 @@
             <h2>I develop software</h2>
         </div>      
     </div>
-    <div class=nav>
-    <nav>
-    <button role="button" type="button" class="btn dropdown" data-toggle="dropdown"> 
-        <i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
-
-    </button>
-    <div class="dropdown-menu navDropDown" aria-labelledby="navbarDropdown">
-        <a id='about' class="dropdown-item" href="#">About Me</a>
-        <div class="dropdown-divider"></div>
-        <a id='projects' class="dropdown-item" href="#">Projects</a>
-        <div class="dropdown-divider"></div>
-        <a id='contact' class="dropdown-item" href="#">Contact</a>
-      </div>
-
-
-    </nav>
+    <div id='navStick' class='nav'>
+        <nav>
+            <button role="button" type="button" class="btn dropdown" data-toggle="dropdown"> 
+                <i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu navDropDown" aria-labelledby="navbarDropdown">
+                <a id='about' class="dropdown-item" href="#">About Me</a>
+                <div class="dropdown-divider"></div>
+                <a id='projects' class="dropdown-item" href="#">Projects</a>
+                <div class="dropdown-divider"></div>
+                <a id='contact' class="dropdown-item" href="#">Contact</a>
+            </div>
+        </nav>
     </div>
-    <div id='aboutContent' class='aboutMe'>
+    <div id='aboutContent' class='aboutMe content'>
         <h3 class='centerH3s'>About Me</h3>
         <img class='portraitMe' src="https://i.imgur.com/Pp4zA4B.png" alt="Portrait of Allie Pacyga">
         <img class='longerPicMe' src="https://i.imgur.com/x6AJavR.png" alt="Allie Pacyga">
-        <p>I’m a software developer with a background in customer success and accounting. From my experiences onboarding new customers in my previous role, I’ve cultivated a passion for improving user experience. As a developer my goal is to solve customer pain points through software.</p>
+        <p class='pPadding'>I’m a software developer with a background in customer success and accounting. From my experiences onboarding new customers in my previous role, I’ve cultivated a passion for improving user experience. As a developer my goal, is to solve customer pain points through software.</p>
     </div>
     <!-- <div class='projects, flexMe'> -->
     <div id='projectsContent' class='projects'> 
         <!-- let's use bootsrap cards  -->
         <h3 class='centerH3s'>Projects</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt consectetur lorem, in faucibus purus aliquet at. Pellentesque ipsum leo, suscipit et luctus at, blandit eget nulla. Suspendisse venenatis nulla sit amet odio tincidunt, et euismod elit tristique. Duis blandit lacus in risus facilisis interdum.</p>
+    
+        <div class="card bg-dark text-white">
+            <img src="..." class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Last updated 3 mins ago</p>
+            </div>
+          </div>
+    
     </div>
-    <div id='contactContent' class='container'>
+    <div id='contactContent' class='container content'>
         <img class='tiles' src="https://i.imgur.com/RNOBAcM.jpg" alt="Blue tile background">
         <div class='yellowDiv'>
             <h3 class='centerH3s'>Contact</h3>
             <p>linkedin</p>
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
             <p>strava</p>
+            <i class="fa fa-square-o" aria-hidden="true"></i>
         </div>  
     </div>
 
