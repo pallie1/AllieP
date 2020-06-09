@@ -23,7 +23,7 @@ body {
     /* background-image: url('https://i.imgur.com/pKJV1XA.jpg');
     background-size: cover;
     position: relative; */
-    height: 650px;
+    height: 605px;
 }
 
 h1 {
@@ -66,12 +66,12 @@ nav>i {
     font-size: 2rem;
 }
 
-.flexMe {
+/* .flexMe {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+} */
 
 .aboutMe {
     display: flex;
@@ -81,6 +81,10 @@ nav>i {
     background-color: whitesmoke;
 }
 
+#aboutMe {
+    
+}
+
 .centerH3s {
     /* text-align: center; */
     margin-top: 2rem;
@@ -88,9 +92,14 @@ nav>i {
 }
 
 .portraitMe {
-    height: 10rem;
+    height: 12rem;
     border: 10px solid #F9C002;
     border-radius: 50%;
+    margin: 2rem;
+}
+
+.longerPicMe {
+    display: none;
 }
 
 .projects {
@@ -101,12 +110,26 @@ nav>i {
     background-color: #A9CAF3;
 }
 
+
+
+.container {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* width: 100%;  */
+}
+
 .tiles {
-    height: 650px;
-    background-size: fill;
+    background-size: cover;
     width: 100%;
     z-index: 200;
-    margin-top: 90px;
+    /* margin-top: 90px; */
+}
+
+.yellowDiv {
+    background-color: RGBA(249, 192, 2, .8);
+    position: absolute;
+    z-index: 200;
 }
 /* Mobile First, then Tablet (min-width:768px) and ending with Desktop (min-width:1024px) */
 
