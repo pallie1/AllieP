@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- BOOTSTRAP JS FILES -->
+    <!-- bootstrap requires jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP STYLES -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Hamburger style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- clear out inherent styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- OUR OWN STYLES  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class=row1>
+        <img class='umbrellas' src="https://i.imgur.com/pKJV1XA.jpg" alt="Umbrellas in the">
+        <div class=centerText>
+            <h1>Hi, I'm Allie Pacyga</h1>
+            <h2>I develop software</h2>
+        </div>      
+    </div>
+    <div class=nav>
+    <nav>
+    <button role="button" type="button" class="btn dropdown" data-toggle="dropdown"> 
+        <i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
+
+    </button>
+    <div class="dropdown-menu navDropDown" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">About Me</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Projects</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Contact</a>
+      </div>
+
+
+    </nav>
+    </div>
+    <div class=aboutMe>
+        <h3 class='centerH3s'>About Me</h3>
+        <img class='portraitMe' src="https://i.imgur.com/Pp4zA4B.png" alt="Portrait of Allie Pacyga">
+        <p>I'm a software developer with a backgrounds in accounting and customer sucess. </p>
+    </div>
+    <!-- <div class='projects, flexMe'> -->
+        <div class='projects'> 
+        <!-- let's use bootsrap cards  -->
+        <h3 class='centerH3s'>Projects</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt consectetur lorem, in faucibus purus aliquet at. Pellentesque ipsum leo, suscipit et luctus at, blandit eget nulla. Suspendisse venenatis nulla sit amet odio tincidunt, et euismod elit tristique. Duis blandit lacus in risus facilisis interdum.</p>
+    </div>
+    <div class='contactMe, flexMe'>
+        <!-- contact meeee -->
+        <h3 class='centerH3s'>Contact Me</h3>
+        
+        <img class='tiles' src="https://i.imgur.com/RNOBAcM.jpg" alt="Blue tile background">
+    </div>
+
+    <!-- OUR APP.JS -->
+    <script src="app.js"></script>
+</body>
+</html>
