@@ -1,4 +1,15 @@
-console.log('jQuery is connected', $)
+////////////
+// nav arrow to x
+////////////
+
+$(() => {
+  const $navButtons = $('nav button')
+  const $nav = $('nav')
+  
+  $navButtons.on('click', () => {
+      $('i').toggleClass('fa-times fa-chevron-down')
+  })
+})
 
 ////////////
 // nav click to go to different section 
@@ -62,7 +73,6 @@ function stickyNavFcn() {
 const sheetUrl = 'https://docs.google.com/spreadsheets/d/197-MKBbILr7wnFXrPQ8MLIESCdYmYrO1kZN0hDmCq4Q/edit?usp=sharing'
 const sheetAsJSON = 'https://spreadsheets.google.com/feeds/list/197-MKBbILr7wnFXrPQ8MLIESCdYmYrO1kZN0hDmCq4Q/od6/public/values?alt=json'
 
-console.log('running before ajax')
 
 // .ajax returns a Promise, and a Promise is resolved using .then()
 $.ajax({
@@ -78,21 +88,57 @@ $.ajax({
               url: project.gsx$url.$t
           }
       }) // map ends
-      app(projects)
+      // app(projects)
+      imgAdder(projects)
   })
   // .catch is meant to handle errors
   .catch( err => console.log('err', err))
 
-console.log('running after ajax')
 
-function app(projectsArr) {
-    console.log('inside app show projectsArr - ', projectsArr)
-    projectsArr.forEach( project => {
-        // creates an h3
-        let title = $('<h3>')
-        // assign the title the value storedin project.title
-        title.text(project.title)
-        // append the title to the body
-        $('#projectsContent').append(title)
-    });
+// function app(projectsArr) {
+//     console.log('inside app show projectsArr - ', projectsArr)
+//     projectsArr.forEach( project => {
+//         // creates an h3
+//         let title = $('<h3>')
+//         // assign the title the value storedin project.title
+//         title.text(project.title)
+//         // append the title to the body
+//         $('#projectsContent').append(title)
+//     });
+// }
+
+
+////////////
+// puts Google sheet info into Project section cards
+////////////
+
+//image grabber/adder
+//testing this bad boi out
+function imgAdder(projectsArr) {
+  projectsArr.forEach( project => {
+      // creates an img
+      let $img = $('<img>')
+      let insideImg = project.image
+      let $imgDivBoot = $('<div>')
+      $imgDivBoot.addClass('card bg-dark text-white')
+      // assign the img src the value storedin project.img
+      $img.attr('src', insideImg)
+      .addClass('card-img')
+      .addClass('cardPadder')
+      // append the img to project
+      $('#projectsContent').append($img)
+  });
 }
+
+// // this bitch works
+// function imgAdder(projectsArr) {
+//   projectsArr.forEach( project => {
+//       // creates an img
+//       let $img = $('<img>')
+//       let insideImg = project.image
+//       // assign the img src the value storedin project.img
+//       $img.attr('src', insideImg)
+//       // append the img to project
+//       $('#projectsContent').append($img)
+//   });
+// }
