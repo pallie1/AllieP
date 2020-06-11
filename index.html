@@ -49,8 +49,15 @@
         <h1>Hi, I'm Allie Pacyga</h1>
         <h2>I develop software</h2>
       </div>
+      <div class="navTDSquare">
+        <i
+          id="arrowXButton"
+          class="fa fa-chevron-down fa-3x"
+          aria-hidden="true"
+        ></i>
+      </div>
     </div>
-    <div id="navStick" class="nav">
+    <div id="navPhoneStick" class="nav">
       <nav class="navPhone">
         <button
           role="button"
@@ -58,7 +65,11 @@
           class="btn dropdown"
           data-toggle="dropdown"
         >
-          <i id='arrowXButton' class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
+          <i
+            id="arrowXButton"
+            class="fa fa-chevron-down fa-3x"
+            aria-hidden="true"
+          ></i>
         </button>
         <div class="dropdown-menu navDropDown" aria-labelledby="navbarDropdown">
           <a id="about" class="dropdown-item" href="#">About Me</a>
@@ -68,11 +79,17 @@
           <a id="contact" class="dropdown-item" href="#">Contact</a>
         </div>
       </nav>
-      <div class="navTabletAndDesktop">
-        <nav>
-          <a id="about" href="#">About Me</a>
-          <a id="projects" href="#">Projects</a>
-          <a id="contact" href="#">Contact</a>
+      <div>
+        <nav class="navTabletAndDesktop">
+          <div class="deskNavHover">
+            <a id="about2" href="#">About Me</a>
+          </div>
+          <div class="deskNavHover">
+            <a id="projects2" href="#">Projects</a>
+          </div>
+          <div class="deskNavHover">
+            <a id="contact2" href="#">Contact</a>
+          </div>
         </nav>
       </div>
     </div>
@@ -102,23 +119,11 @@
       </div>
     </div>
     <!-- <div class='projects, flexMe'> -->
-    <div class="blueBackground">
+    <div id="projectsContent" class="blueBackground content">
       <!-- let's use bootsrap cards  -->
       <h3 class="centerH3s">Projects</h3>
-      <div id="projectsContent" class="projects">
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt consectetur lorem, in faucibus purus aliquet at. Pellentesque ipsum leo, suscipit et luctus at, blandit eget nulla. Suspendisse venenatis nulla sit amet odio tincidunt, et euismod elit tristique. Duis blandit lacus in risus facilisis interdum.</p> -->
-
-        <!-- <div id="projectsContent" class="projectsSizer"> -->
-          <!-- <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-            <p class="card-text">Last updated 3 mins ago</p>
-          </div> -->
-        <!-- </div> -->
+      <div class="projects">
+        <!-- Javascript uses this div -->
       </div>
     </div>
     <div id="contactContent" class="container content">
@@ -129,14 +134,18 @@
       />
       <div class="yellowDiv">
         <h3 class="centerH3s">Let's Connect</h3>
-        <p>linkedin</p>
-        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        <p>strava</p>
-        <i class="fa fa-square-o" aria-hidden="true"></i>
+        <div class='iconsConnect'>
+          <p>email: alliepacyga@gmail.com</p>
+        <a href="https://www.linkedin.com/in/allie-pacyga-894318a8/"> <i class="fa fa-linkedin-square" aria-hidden="true"></i>linkedIn</a>
+        <a href="https://www.strava.com/athletes/55416918">       <i class="fa fa-square-o" aria-hidden="true"></i>Strava</a>
+ 
+      </div>
+      
         <input type="text" placeholder="Name" />
         <input type="text" placeholder="Email" />
         <textarea name="message" cols="30" rows="5">Message</textarea>
         <button type="button" class="btn btn-primary">Submit</button>
+
       </div>
     </div>
 

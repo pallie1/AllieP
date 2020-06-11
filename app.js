@@ -26,10 +26,37 @@ $(function() {
   
 })
 })
- 
 
 ////////////
-// nav click to go to different section 
+// tablet desktop nav click to go to different section 
+////////////
+ 
+$(document).ready(function() {
+  $('#about2').click(function(event) {
+    $('body, html').animate({
+      scrollTop: $("#aboutContent").offset().top
+    }, 600);
+  });
+});
+
+$(document).ready(function() {
+  $('#projects2').click(function(event) {
+    $('body, html').animate({
+      scrollTop: $("#projectsContent").offset().top
+    }, 600);
+  });
+});
+
+$(document).ready(function() {
+  $('#contact2').click(function(event) {
+    $('body, html').animate({
+      scrollTop: $("#contactContent").offset().top
+    }, 600);
+  });
+});
+
+////////////
+// phone nav click to go to different section 
 ////////////
 
 $(document).ready(function() {
@@ -56,28 +83,51 @@ $(document).ready(function() {
     });
   });
 
+  
+
 ////////////
-// nav stickiness 
+// mobile nav stickiness 
 ////////////
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {stickyNavFcn()};
+window.onscroll = function() {stickyPhoneNavFcn()};
 
 // Get the navbar
-var navStick = document.getElementById("navStick");
+var navPhoneStick = document.getElementById("navPhoneStick");
 
 // Get the offset position of the navbar
-var sticky = navStick.offsetTop;
+var sticky = navPhoneStick.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyNavFcn() {
+function stickyPhoneNavFcn() {
   if (window.pageYOffset >= sticky) {
-    navStick.classList.add("sticky")
+    navPhoneStick.classList.add("sticky")
   } else {
-    navStick.classList.remove("sticky");
+    navPhoneStick.classList.remove("sticky");
   }
 }
 
+////////////
+// Tablet & desktop nav stickiness 
+////////////
+
+// // When the user scrolls the page, execute myFunction
+// window.onscroll = function() {stickyNavFcn()};
+
+// // Get the navbar
+// var navStick = document.getElementById("navStick");
+
+// // Get the offset position of the navbar
+// var sticky = navStick.offsetTop;
+
+// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function stickyNavFcn() {
+//   if (window.pageYOffset >= sticky) {
+//     navStick.classList.add("sticky")
+//   } else {
+//     navStick.classList.remove("sticky");
+//   }
+// }
 
 
 
@@ -129,8 +179,7 @@ $.ajax({
 // puts Google sheet info into Project section cards
 ////////////
 
-//image grabber/adder
-//testing this bad boi out
+//image & link grabber/adder
 function imgAdder(projectsArr) {
   projectsArr.forEach( project => {
       // creates an img
@@ -157,16 +206,3 @@ function imgAdder(projectsArr) {
   });
 }
 
-// // this works!
-// function imgAdder(projectsArr) {
-//   projectsArr.forEach( project => {
-//       // creates an img
-//       let $img = $('<img>')
-//       let insideImg = project.image
-//       // assign the img src the value storedin project.img
-//       $img.attr('src', insideImg)
-//       .addClass('cardPadder')
-//       // append the img to project
-//       $('#projectsContent').append($img)
-//   });
-// }

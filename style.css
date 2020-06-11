@@ -47,20 +47,29 @@ h2 {
     margin-top: 4px;
 }
 
+.navTDSquare {
+    display:none;
+}
 
 .navPhone {
-    /* background-color: #A9CAF3; */
-    /* background-color: #3BCAE2; */
-    background-color: #78DBEA;
+    /* background-color: #A9CAF3;
+    background-color: #3BCAE2; */
+    background-color: #2F6FAE;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
+#about, #projects, #contact, i {
+    color: white;
+}
 
+#about:hover, #projects:hover, #contact:hover {
+    background-color: #3BCAE2;
+}
 
 .navDropDown {
-    background-color: #78DBEA;
+    background-color: #2F6FAE;
     /* background-color: #1D6AA8; */
     width: 100%;
     text-align: center;
@@ -80,8 +89,10 @@ h2 {
   }
 
  .sticky + .content {
-    padding-top: 60px;
+    padding-top: 10%;
   }
+
+  
 
 /* .flexMe {
     display: flex;
@@ -196,9 +207,20 @@ h2 {
 .yellowDiv {
     background-color: RGBA(249, 192, 2, .8);
     position: absolute;
-    margin: 0 auto;
     width: 80%;
     height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconsConnect {
+    display: block;
+    padding: 10px;
+}
+
+input {
+    margin: 5px;
 }
 
 input, textarea {
@@ -214,6 +236,11 @@ input, textarea {
 /* Mobile First, then Tablet (min-width:768px) and ending with Desktop (min-width:1024px) */
 
 @media only screen and (min-width: 768px) {
+
+    #about2, #projects2, #contact2 {
+        color: white;
+    }
+
     .portraitMe {
         display: none;
     }
@@ -251,13 +278,45 @@ input, textarea {
         justify-content: right;
     } */
 
-    .navTabletAndDesktop {
-        /* background-color: #78DBEA; */
+    .navTDSquare {
+        position: relative;
+        display: block;
         background-color: #2F6FAE;
-        line-height: 40px;
-        width: 100%;
-        justify-content: right;
+        /* height: 200px; */
+        height: 20%;
+        width: 100px;
+        display: flex;
+        margin-left: 86vw;
+        margin-top: 45vh;
+        border-radius: 4px;
+        line-height: 3rem;
+        justify-content: center;
+        padding-top: 5px;
     }
+
+    .navTabletAndDesktop {
+        background-color: #2F6FAE;
+        height: 249px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        margin-left: 86vw;
+        margin-top: 70px;
+        border-radius: 4px;
+        line-height: 3rem;
+    }
+
+
+
+    .deskNavHover:hover {
+        width: 100px;
+        text-align: center;
+        background-color:  #3BCAE2;
+    }
+
 
     .tabletDesktopAboutMe {
         display: block;
@@ -288,5 +347,11 @@ input, textarea {
         margin: 3%;
         display: block;
     }
+
+
+    
+     .sticky + .content {
+        padding-top: 0%;
+      }
 
 }
