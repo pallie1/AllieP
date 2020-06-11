@@ -3,29 +3,29 @@
 ////////////
 
 //this toggle works
-// $(() => {
-//   const $navButtons = $('nav button')
-//   const $nav = $('nav')
+$(() => {
+  const $navButtons = $('nav button')
+  const $nav = $('nav')
   
-//   $navButtons.on('click', () => {
-//       $('i').toggleClass('fa-times fa-chevron-down')
-//   })
+  $navButtons.on('click', () => {
+      $('i').toggleClass('fa-times fa-chevron-down')
+  })
+})
+
+//trying to get the nav icon to switch back when clicked elsewhere
+// $(function() {
+//   // const $navButtons = $('nav button')
+//   $(document).on('click', function(e) {
+//       if (e.target.id === 'arrowXButton') {
+//     $('i').toggleClass('fa-times fa-chevron-down')
+//   } 
+//   else {
+//     $('i').addClass('fa-chevron-down')
+
+//   }
+  
 // })
-
-//testing this one out
-$(function() {
-  // const $navButtons = $('nav button')
-  $(document).on('click', function(e) {
-      if (e.target.id === 'arrowXButton') {
-    $('i').toggleClass('fa-times fa-chevron-down')
-  } 
-  else {
-    $('i').toggleClass('fa-times fa-chevron-down')
-
-  }
-  
-})
-})
+// })
 
 ////////////
 // tablet desktop nav click to go to different section 
@@ -94,48 +94,27 @@ $(document).ready(function() {
   
 
 ////////////
-// mobile nav stickiness 
+// nav stickiness 
 ////////////
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {stickyPhoneNavFcn()};
+window.onscroll = function() {stickyNavFcn()};
 
 // Get the navbar
-var navPhoneStick = document.getElementById("navPhoneStick");
+var navStick = document.getElementById("navStick");
 
 // Get the offset position of the navbar
-var sticky = navPhoneStick.offsetTop;
+var sticky = navStick.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyPhoneNavFcn() {
+function stickyNavFcn() {
   if (window.pageYOffset >= sticky) {
-    navPhoneStick.classList.add("sticky")
+    navStick.classList.add("sticky")
   } else {
-    navPhoneStick.classList.remove("sticky");
+    navStick.classList.remove("sticky");
   }
 }
 
-////////////
-// Tablet & desktop nav stickiness 
-////////////
-
-// // When the user scrolls the page, execute myFunction
-// window.onscroll = function() {stickyNavFcn()};
-
-// // Get the navbar
-// var navStick = document.getElementById("navStick");
-
-// // Get the offset position of the navbar
-// var sticky = navStick.offsetTop;
-
-// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function stickyNavFcn() {
-//   if (window.pageYOffset >= sticky) {
-//     navStick.classList.add("sticky")
-//   } else {
-//     navStick.classList.remove("sticky");
-//   }
-// }
 
 
 
@@ -170,17 +149,6 @@ $.ajax({
   .catch( err => console.log('err', err))
 
 
-// function app(projectsArr) {
-//     console.log('inside app show projectsArr - ', projectsArr)
-//     projectsArr.forEach( project => {
-//         // creates an h3
-//         let title = $('<h3>')
-//         // assign the title the value storedin project.title
-//         title.text(project.title)
-//         // append the title to the body
-//         $('#projectsContent').append(title)
-//     });
-// }
 
 
 ////////////
@@ -192,12 +160,14 @@ function imgAdder(projectsArr) {
   projectsArr.forEach( project => {
       // creates an img
       let $img = $('<img>')
+      let $title = $('<h3>')
       let insideImg = project.image
       let projectUrl = project.url
       let $divForImgHover = $('<div>')
       // let $aForProjectUrl = $('<a>')
       // $aForProjectUrl.attr('href', projectUrl)
       // console.log('link - ', $aForProjectUrl)
+      $title.text(project.title)
       $divForImgHover.addClass('hoverDivProjects')
       // assign the img src the value storedin project.img
       $img.attr('src', insideImg)
@@ -209,7 +179,9 @@ function imgAdder(projectsArr) {
       console.log('$img - ', $img)
       // append the img to project
       $divForImgHover.append($img)
-      $('#projectsContent').append($divForImgHover)
+      .prepend($title)
+
+      $('.projects').append($divForImgHover)
       $img.wrap("<a href=' " + projectUrl + "'></a>")
   });
 }

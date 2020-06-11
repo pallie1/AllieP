@@ -14,25 +14,22 @@ body {
 
 .umbrellas {
     height: 100vh;
-    width: 100%;
     background-size: contain;
     position: fixed;
     z-index: -400;
 }
 
+.aboutMeText {
+    padding: 20px;
+}
+
 .row1 {
-    /* background-image: url('https://i.imgur.com/pKJV1XA.jpg');
-    background-size: cover;
-    position: relative; */
-   
-    /* height: 605px; */
     height: 90vh;
 }
 
 h1 {
     font-weight: 700;
     font-size: 2.5rem;
-    margin-top: -10px;
 }
 
 
@@ -53,8 +50,6 @@ h2 {
 }
 
 .navPhone {
-    /* background-color: #A9CAF3;
-    background-color: #3BCAE2; */
     background-color: #2F6FAE;
     width: 100%;
     display: flex;
@@ -94,20 +89,6 @@ h2 {
   }
 
   
-
-/* .flexMe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} */
-
-
-
-/* #aboutMe {
-    
-} */
-
 
 .aboutMe {
     display: flex;
@@ -172,15 +153,16 @@ h2 {
     margin: 20px 0 20px 0;
 }
 
-/* .projectsSizer {
-    width: 70vw;
-} */
+
 
 .cardPadder {
     margin-bottom: 20px;
     width: 70vw;
 }
 
+.hoverDivProjects {
+/* keep this for jQuery */
+}
 
 .container {
     display: inline-flex;
@@ -189,35 +171,30 @@ h2 {
     width: 100vw;
 }
 
-/* #triangle-topleft {
-    width: 100vw;s
-    height: 0;
-    border-top: 100px solid red;
-    border-right: 100px solid transparent;
-    position: relative;
-    z-index: 20;
-  } */
 
 .tiles {
-    /* height: 100vh; */
     width: 100vw;
-    /* position: relative;
-    z-index: -10; */
+    /* margin-left: -15px; */
 }
 
 .yellowDiv {
     background-color: RGBA(249, 192, 2, .8);
     position: absolute;
     width: 80%;
-    height: 40%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.blueSubmit {
+    margin-top: 5px;
+}
+
 .iconsConnect {
     display: block;
     padding: 10px;
+    line-height: 1.5rem;
 }
 
 input {
@@ -238,6 +215,15 @@ input, textarea {
 
 @media only screen and (min-width: 768px) {
 
+    .umbrellas {
+        height: 100vh;
+        width: 100%;
+        background-size: contain;
+        position: fixed;
+        z-index: -400;
+    }
+
+    
     #about2, #projects2, #contact2 {
         color: white;
     }
@@ -261,6 +247,7 @@ input, textarea {
     .aboutMeText {
         grid-area: 1 / 2 / 2 / 3;
         width: 35vw;
+        padding-left: 0px;
     }
 
     .cardPadder {
@@ -276,24 +263,17 @@ input, textarea {
         padding-top: 0%;
       }
 
-    /* .inlineNav {
-        background-color: #78DBEA;
-        line-height: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: right;
-    } */
 
     .navTDSquare {
         position: relative;
         display: block;
         background-color: #2F6FAE;
         /* height: 200px; */
-        height: 20%;
+        height: 30%;
         width: 100px;
         display: flex;
-        margin-left: 90vw;
-        margin-top: 45vh;
+        margin-left: 87vw;
+        margin-top: 30vh;
         border-radius: 4px;
         line-height: 3rem;
         justify-content: center;
@@ -309,7 +289,7 @@ input, textarea {
         justify-content: space-around;
         align-items: center;
         position: relative;
-        margin-left: 90vw;
+        margin-left: 87vw;
         margin-top: 70px;
         border-radius: 4px;
         line-height: 3rem;
@@ -340,22 +320,22 @@ input, textarea {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        /* justify-content: space-around; */
+        justify-content: space-evenly;
         width: 60vw;
     }
 
     .cardPadder {
         width: 20vw;
+        margin: 5px;
+        margin-bottom: 15px;
     }
 
-    /* .hoverDivProjects {
-        width: 30vw;
-        margin: 3%;
+
+    .hoverDivProjects {
         display: block;
-    } */
-
-
-    
-   
+        width: 20vw;
+        margin: 5px;
+        margin-bottom: 15;
+    }
 
 }
