@@ -269,7 +269,7 @@ input, textarea {
         display: block;
         background-color: #2F6FAE;
         /* height: 200px; */
-        height: 30%;
+        height: 30vh;
         width: 100px;
         display: flex;
         margin-left: 87vw;
