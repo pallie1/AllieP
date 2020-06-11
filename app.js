@@ -30,9 +30,17 @@ $(function() {
 ////////////
 // tablet desktop nav click to go to different section 
 ////////////
+
+$(document).ready(function() {
+  $('#arrowXButton').click(function() {
+    $('body, html').animate({
+      scrollTop: $("#aboutContent").offset().top
+    }, 600);
+  });
+});
  
 $(document).ready(function() {
-  $('#about2').click(function(event) {
+  $('#about2').click(function() {
     $('body, html').animate({
       scrollTop: $("#aboutContent").offset().top
     }, 600);
@@ -40,7 +48,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('#projects2').click(function(event) {
+  $('#projects2').click(function() {
     $('body, html').animate({
       scrollTop: $("#projectsContent").offset().top
     }, 600);
@@ -48,7 +56,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('#contact2').click(function(event) {
+  $('#contact2').click(function() {
     $('body, html').animate({
       scrollTop: $("#contactContent").offset().top
     }, 600);
@@ -202,7 +210,7 @@ function imgAdder(projectsArr) {
       // append the img to project
       $divForImgHover.append($img)
       $('#projectsContent').append($divForImgHover)
-      $img.wrap("<a href=' " + projectUrl + " '></a>")
+      $img.wrap("<a href=' " + projectUrl + "'></a>")
   });
 }
 
