@@ -2,14 +2,31 @@
 // nav arrow to x
 ////////////
 
-$(() => {
-  const $navButtons = $('nav button')
-  const $nav = $('nav')
+//this toggle works
+// $(() => {
+//   const $navButtons = $('nav button')
+//   const $nav = $('nav')
   
-  $navButtons.on('click', () => {
-      $('i').toggleClass('fa-times fa-chevron-down')
-  })
+//   $navButtons.on('click', () => {
+//       $('i').toggleClass('fa-times fa-chevron-down')
+//   })
+// })
+
+//testing this one out
+$(function() {
+  // const $navButtons = $('nav button')
+  $(document).on('click', function(e) {
+      if (e.target.id === 'arrowXButton') {
+    $('i').toggleClass('fa-times fa-chevron-down')
+  } 
+  else {
+    $('i').toggleClass('fa-times fa-chevron-down')
+
+  }
+  
 })
+})
+ 
 
 ////////////
 // nav click to go to different section 
@@ -119,18 +136,28 @@ function imgAdder(projectsArr) {
       // creates an img
       let $img = $('<img>')
       let insideImg = project.image
-      let $imgDivBoot = $('<div>')
-      $imgDivBoot.addClass('card bg-dark text-white')
+      let projectUrl = project.url
+      let $divForImgHover = $('<div>')
+      // let $aForProjectUrl = $('<a>')
+      // $aForProjectUrl.attr('href', projectUrl)
+      // console.log('link - ', $aForProjectUrl)
+      $divForImgHover.addClass('hoverDivProjects')
       // assign the img src the value storedin project.img
       $img.attr('src', insideImg)
       .addClass('card-img')
       .addClass('cardPadder')
+      
+      
+      console.log('project url - ', projectUrl)
+      console.log('$img - ', $img)
       // append the img to project
-      $('#projectsContent').append($img)
+      $divForImgHover.append($img)
+      $('#projectsContent').append($divForImgHover)
+      $img.wrap("<a href=' " + projectUrl + " '></a>")
   });
 }
 
-// // this bitch works
+// // this works!
 // function imgAdder(projectsArr) {
 //   projectsArr.forEach( project => {
 //       // creates an img
@@ -138,6 +165,7 @@ function imgAdder(projectsArr) {
 //       let insideImg = project.image
 //       // assign the img src the value storedin project.img
 //       $img.attr('src', insideImg)
+//       .addClass('cardPadder')
 //       // append the img to project
 //       $('#projectsContent').append($img)
 //   });

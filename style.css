@@ -61,6 +61,7 @@ h2 {
 
 .navDropDown {
     background-color: #78DBEA;
+    /* background-color: #1D6AA8; */
     width: 100%;
     text-align: center;
     font-size: 2rem;
@@ -132,7 +133,7 @@ h2 {
     border: 10px solid #F9C002;
     border-radius: 50%;
     margin: 2rem;
-    width: 40%;
+    width: 40vh;
 }
 
 .longerPicMe {
@@ -154,18 +155,20 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
     margin: 20px 0 20px 0;
 }
 
-.projectsSizer {
+/* .projectsSizer {
     width: 70vw;
-}
+} */
 
 .cardPadder {
     margin-bottom: 20px;
+    width: 70vw;
 }
+
 
 .container {
     display: inline-flex;
@@ -207,6 +210,7 @@ input, textarea {
 }
 
 
+
 /* Mobile First, then Tablet (min-width:768px) and ending with Desktop (min-width:1024px) */
 
 @media only screen and (min-width: 768px) {
@@ -230,6 +234,11 @@ input, textarea {
         grid-area: 1 / 2 / 2 / 3;
     }
 
+    .cardPadder {
+        margin-bottom: 20px;
+        width: 40vw;
+    }
+
     .navPhone {
         display: none;
     }
@@ -243,7 +252,8 @@ input, textarea {
     } */
 
     .navTabletAndDesktop {
-        background-color: #78DBEA;
+        /* background-color: #78DBEA; */
+        background-color: #2F6FAE;
         line-height: 40px;
         width: 100%;
         justify-content: right;
@@ -263,12 +273,20 @@ input, textarea {
 @media only screen and (min-width: 1024px) {
     .projects {
         display: flex;
-        flex-direction: wrap;
-        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 70vw;
     }
 
     .cardPadder {
         width: 30vw;
-        margin: 3%;
     }
+
+    .hoverDivProjects {
+        width: 30vw;
+        margin: 3%;
+        display: block;
+    }
+
 }
