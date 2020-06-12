@@ -142,6 +142,6 @@ function stickyNavFcn() {
 ## Issues and Resolutions
  My biggest issues revolved around making my background images show up with the correct size/aspect ratio and also not throw off all of the other elements. This was a little surprising to me because I thought adding images would take no time at all. It just took a lot of time playing around with z-indexs and adjusting height and width.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+#### Easter egg
+Make the screen a small width and type tooth anywhere. There's an event listener that'll change the About Me picture.
+
