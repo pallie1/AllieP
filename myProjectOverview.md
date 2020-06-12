@@ -96,20 +96,51 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Total | H | 20hrs| -hrs | -hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ I used Bootstrap to add a few elements to my page. The Submit button at the bottom of the "Let's Connect" section and the mobile drop-down came from Bootstrap. I love how easy these elements were to add into my code and I could still edit them to match the rest of the page.
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
+This section of code is used by both nav bars. They're both in a div with ID='navStick'. The navs have their own section in my document's grid layout; it's right below the top section. .offsetTop is the distance the "navStick" element is from the element above it. Once you scroll more than that the class 'sticky' gets added which makes the nav have a fixed position at top:0.
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+/////////////
+///Javascript
+////////////
+window.onscroll = function() {stickyNavFcn()};
+
+// Get the navbar
+var navStick = document.getElementById("navStick");
+
+// Get the offset position of the navbar
+var sticky = navStick.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyNavFcn() {
+  if (window.pageYOffset >= sticky) {
+    navStick.classList.add("sticky")
+  } else {
+    navStick.classList.remove("sticky");
+  }
 }
+
+/////////////
+///CSS
+////////////
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 400;
+  }
+
+ .sticky + .content {
+    padding-top: 10%;
+  }
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+ My biggest issues revolved around making my background images show up with the correct size/aspect ratio and also not throw off all of the other elements. This was a little surprising to me because I thought adding images would take no time at all. It just took a lot of time playing around with z-indexs and adjusting height and width.
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
