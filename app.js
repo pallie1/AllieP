@@ -97,7 +97,6 @@ $(document).ready(function() {
 // nav stickiness 
 ////////////
 
-// When the user scrolls the page, execute myFunction
 window.onscroll = function() {stickyNavFcn()};
 
 // Get the navbar
@@ -186,3 +185,37 @@ function imgAdder(projectsArr) {
   });
 }
 
+//////////////
+// Easter egg
+//////////
+
+// let string = ""
+// let link = 'https://i.imgur.com/t5HHRo8.png'
+
+// $(document).keypress(function(typing) {
+//   // if(typing.keyCode == 989) {
+//   //   $('.portraitMe').attr('src', link)
+//   console.log(typing.fromCharCode)
+//   // if(typing.keyCode == [116,111,111,116,104]) {
+//   //   console.log('ok')
+//   // }
+//   })
+// // })
+
+
+let string = ""
+let noTooth = 'https://i.imgur.com/t5HHRo8.png'
+let normal = "https://i.imgur.com/Pp4zA4B.png"
+
+$(document).keypress(function(typing) {
+  if(typing.keyCode == (116,111,111,116,104)) {
+    $('.portraitMe').attr('src', noTooth)
+  }
+  })
+
+
+$(document).keyup(function(typing) {
+  if(typing.keyCode == 27) {
+    $('.portraitMe').attr('src', normal)
+  }
+})
