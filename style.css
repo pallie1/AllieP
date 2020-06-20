@@ -12,6 +12,11 @@ body {
     font-family: 'Space Mono', sans-serif;
 }
 
+.muli {
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+}
+
 .umbrellas {
     height: 100vh;
     background-size: contain;
@@ -174,7 +179,7 @@ h2 {
 
 .tiles {
     width: 100vw;
-    height: 50vh;
+    height: 100%;
 }
 
 .yellowDiv {
@@ -326,6 +331,11 @@ input, textarea {
         flex-direction: column;
         align-items: center;
         width: 40%;
+    }
+
+    .tiles {
+        width: 100vw;
+        height: 100vh;
     }
 }
 
