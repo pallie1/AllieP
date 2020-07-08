@@ -159,14 +159,22 @@ h2 {
 }
 
 
-
 .cardPadder {
     margin-bottom: 20px;
     width: 70vw;
+    opacity: .6;
+    /* position: relative; */
 }
 
-.hoverDivProjects {
-    /* keep this for jQuery */
+/* .hoverDivProjects {
+    background-color: RGBA(249, 192, 2, .6);
+    margin: 0 auto;
+} */
+
+.hoverDivProjects .blueLink, .blueTitle {
+    background-color: #A9CAF3;
+    border: 5px; 
+    line-height: 1.3em;
 }
 
 .container {
@@ -178,8 +186,8 @@ h2 {
 
 
 .tiles {
+    height: 100vh;
     width: 100vw;
-    height: 100%;
 }
 
 .yellowDiv {
@@ -305,6 +313,9 @@ input, textarea {
         line-height: 3rem;
     }
 
+    a:hover {
+        text-decoration: none;
+    }
 
 
     .deskNavHover:hover {
@@ -335,6 +346,7 @@ input, textarea {
 
     .tiles {
         width: 100vw;
+        margin: 0 auto;
         height: 100vh;
     }
 }

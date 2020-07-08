@@ -3,16 +3,16 @@
 ////////////
 
 //this toggle works
-$(() => {
-  const $navButtons = $('nav button')
-  const $nav = $('nav')
+// $(() => {
+//   const $navButtons = $('nav button')
+//   const $nav = $('nav')
   
-  $navButtons.on('click', () => {
-      $('i').toggleClass('fa-times fa-chevron-down')
-  })
-})
+//   $navButtons.on('click', () => {
+//       $('i').toggleClass('fa-times fa-chevron-down')
+//   })
+// })
 
-//trying to get the nav icon to switch back when clicked elsewhere
+// //trying to get the nav icon to switch back when clicked elsewhere
 // $(function() {
 //   // const $navButtons = $('nav button')
 //   $(document).on('click', function(e) {
@@ -154,7 +154,9 @@ $.ajax({
 // puts Google sheet info into Project section cards
 ////////////
 
-//image & link grabber/adder
+
+// //before I start messing with it more
+// //image & link grabber/adder
 function imgAdder(projectsArr) {
   projectsArr.forEach( project => {
       // creates an img
@@ -166,24 +168,56 @@ function imgAdder(projectsArr) {
       // let $aForProjectUrl = $('<a>')
       // $aForProjectUrl.attr('href', projectUrl)
       // console.log('link - ', $aForProjectUrl)
-      $title.text(project.title)
+      $title.text(project.description).attr('class', 'blueTitle')
       $divForImgHover.addClass('hoverDivProjects')
       // assign the img src the value storedin project.img
       $img.attr('src', insideImg)
-      .addClass('card-img')
       .addClass('cardPadder')
       
       
       console.log('project url - ', projectUrl)
       console.log('$img - ', $img)
       // append the img to project
-      $divForImgHover.append($img)
-      .prepend($title)
+      $divForImgHover.append($img).prepend($title);
+      
 
       $('.projects').append($divForImgHover)
-      $img.wrap("<a href=' " + projectUrl + "'></a>")
+      $img.wrap("<a class='blueLink' href=' " + projectUrl + "'></a>")
   });
 }
+
+
+// //before I start messing with it more
+// //image & link grabber/adder
+// function imgAdder(projectsArr) {
+//   projectsArr.forEach( project => {
+//       // creates an img
+//       let $img = $('<img>')
+//       let $title = $('<h3>')
+//       let insideImg = project.image
+//       let projectUrl = project.url
+//       let $divForImgHover = $('<div>')
+//       // let $aForProjectUrl = $('<a>')
+//       // $aForProjectUrl.attr('href', projectUrl)
+//       // console.log('link - ', $aForProjectUrl)
+//       $title.text(project.title)
+//       $divForImgHover.addClass('hoverDivProjects')
+//       // assign the img src the value storedin project.img
+//       $img.attr('src', insideImg)
+//       .addClass('card-img')
+//       .addClass('cardPadder')
+      
+      
+//       console.log('project url - ', projectUrl)
+//       console.log('$img - ', $img)
+//       // append the img to project
+//       $divForImgHover.append($img)
+//       .prepend($title)
+
+//       $('.projects').append($divForImgHover)
+//       $img.wrap("<a href=' " + projectUrl + "'></a>")
+//   });
+// }
 
 //////////////
 // Easter egg
