@@ -166,6 +166,10 @@ h2 {
     /* position: relative; */
 }
 
+.cardPadder:hover {
+    opacity: 1;
+}
+
 /* .hoverDivProjects {
     background-color: RGBA(249, 192, 2, .6);
     margin: 0 auto;
@@ -232,6 +236,7 @@ input, textarea {
 /* Mobile First, then Tablet (min-width:768px) and ending with Desktop (min-width:1024px) */
 
 @media only screen and (min-width: 768px) {
+
 
     .umbrellas {
         height: 100vh;
