@@ -4,8 +4,6 @@ html {
     font-size: 17px;
 }
 
-/* MOBILE FIRST! @media only screen and (min-width: 506px) */
-
 body {
     display: grid;
     grid-template-rows: repeat(5, auto);
@@ -71,7 +69,6 @@ h2 {
 
 .navDropDown {
     background-color: #2F6FAE;
-    /* background-color: #1D6AA8; */
     width: 100%;
     text-align: center;
     font-size: 2rem;
@@ -110,7 +107,6 @@ h2 {
 }
 
 .centerH3s {
-    /* text-align: center; */
     margin-top: 2rem;
     font-size: 2rem;
 }
@@ -163,17 +159,11 @@ h2 {
     margin-bottom: 20px;
     width: 70vw;
     opacity: .6;
-    /* position: relative; */
 }
 
 .cardPadder:hover {
     opacity: 1;
 }
-
-/* .hoverDivProjects {
-    background-color: RGBA(249, 192, 2, .6);
-    margin: 0 auto;
-} */
 
 .hoverDivProjects .blueLink, .blueTitle {
     background-color: #A9CAF3;
@@ -231,10 +221,6 @@ input, textarea {
     color: grey;
 }
 
-
-
-/* Mobile First, then Tablet (min-width:768px) and ending with Desktop (min-width:1024px) */
-
 @media only screen and (min-width: 768px) {
 
 
@@ -291,7 +277,6 @@ input, textarea {
         position: relative;
         display: block;
         background-color: #2F6FAE;
-        /* height: 200px; */
         height: 30vh;
         width: 100px;
         display: flex;
